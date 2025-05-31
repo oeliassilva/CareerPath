@@ -15,52 +15,36 @@
             justify-content: center;
             align-items: center;
             min-height: 100vh;
-            overflow: hidden;
             position: relative;
         }
         .container {
             text-align: center;
             position: relative;
             z-index: 1;
-        }
-        h1 {
-            font-size: 4em;
-            margin: 0;
-            text-transform: uppercase;
-            letter-spacing: 2px;
-            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
-        }
-        .subtitle {
-            font-size: 1.2em;
-            margin: 10px 0;
-            opacity: 0.9;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            padding: 0;
+            width: 100%;
+            box-sizing: border-box;
         }
         .logo {
-            width: 150px;
-            height: 150px;
-            background: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100"><circle cx="50" cy="50" r="40" fill="%23fff" opacity="0.1"/><path d="M30 70 Q50 50 70 70" stroke="%23fff" stroke-width="5" fill="none"/></svg>') no-repeat center;
-            background-size: contain;
-            position: absolute;
-            top: 50%;
-            left: 50%;
-            transform: translate(-50%, -50%);
-            animation: rotate 10s linear infinite;
+            width: 80vw; /* Usa 80% da largura da tela */
+            max-width: 450px; /* Limite máximo para telas grandes */
+            height: auto; /* Mantém a proporção da imagem */
+            margin-bottom: 0;
         }
-        .logo-text {
-            position: absolute;
-            top: 50%;
-            left: 50%;
-            transform: translate(-50%, -50%);
-            font-size: 1.5em;
-            text-transform: uppercase;
-            color: #fff;
-            text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.7);
+        .logo img {
+            width: 100%;
+            height: auto;
+            object-fit: contain;
         }
         .description {
             font-size: 1.5em;
-            margin-top: 100px;
-            line-height: 1.4;
+            margin-top: 0;
+            line-height: 1.2;
             text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.5);
+            padding: 0 15px; /* Adiciona padding lateral para evitar que o texto encoste nas bordas */
         }
         .background-effect {
             position: absolute;
@@ -80,26 +64,36 @@
             right: 20%;
             animation-delay: 4s;
         }
-        @keyframes rotate {
-            from { transform: translate(-50%, -50%) rotate(0deg); }
-            to { transform: translate(-50%, -50%) rotate(360deg); }
-        }
         @keyframes float {
             0%, 100% { transform: translate(0, 0); }
             50% { transform: translate(20px, 20px); }
+        }
+        /* Media query para telas menores (celulares) */
+        @media (max-width: 600px) {
+            .logo {
+                width: 70vw; /* Reduz ainda mais o tamanho do logo em telas pequenas */
+                max-width: 300px;
+            }
+            .description {
+                font-size: 1em; /* Reduz o tamanho da fonte para telas menores */
+                margin-top: 0;
+            }
+            .background-effect {
+                width: 150px; /* Reduz o tamanho do efeito de fundo em telas menores */
+                height: 150px;
+            }
         }
     </style>
 </head>
 <body>
     <div class="container">
-        <h1>CareerPath</h1>
-        <div class="subtitle">Plataforma de Orientação de Carreira com IA</div>
         <div class="logo">
-            <div class="logo-text">CareerPath</div>
+            <img src="images/logo.png" alt="CareerPath Logo">
         </div>
         <div class="description">
-            Solução integrada para aprendizado, desenvolvimento e empregabilidade<br>
-            Sua jornada do zero ao emprego em tech
+            Solução integrada para<br> aprendizado, desenvolvimento e empregabilidade<br><p></p>
+            Plataforma em desenvolvimento.<br>
+            Fique atento às atualizações!
         </div>
     </div>
     <div class="background-effect"></div>
