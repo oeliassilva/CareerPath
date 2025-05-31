@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CareerPath</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: Arial, sans-serif;
+            background-color: #1a2a44;
+            color: #fff;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            overflow: hidden;
+            position: relative;
+        }
+        .container {
+            text-align: center;
+            position: relative;
+            z-index: 1;
+        }
+        h1 {
+            font-size: 4em;
+            margin: 0;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+        }
+        .subtitle {
+            font-size: 1.2em;
+            margin: 10px 0;
+            opacity: 0.9;
+        }
+        .logo {
+            width: 150px;
+            height: 150px;
+            background: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100"><circle cx="50" cy="50" r="40" fill="%23fff" opacity="0.1"/><path d="M30 70 Q50 50 70 70" stroke="%23fff" stroke-width="5" fill="none"/></svg>') no-repeat center;
+            background-size: contain;
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            animation: rotate 10s linear infinite;
+        }
+        .logo-text {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            font-size: 1.5em;
+            text-transform: uppercase;
+            color: #fff;
+            text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.7);
+        }
+        .description {
+            font-size: 1.5em;
+            margin-top: 100px;
+            line-height: 1.4;
+            text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.5);
+        }
+        .background-effect {
+            position: absolute;
+            width: 200px;
+            height: 200px;
+            background: radial-gradient(circle, rgba(255,255,255,0.1) 0%, rgba(0,0,0,0) 70%);
+            filter: blur(50px);
+            animation: float 6s ease-in-out infinite;
+        }
+        .background-effect:nth-child(2) {
+            top: 20%;
+            left: 20%;
+            animation-delay: 2s;
+        }
+        .background-effect:nth-child(3) {
+            bottom: 20%;
+            right: 20%;
+            animation-delay: 4s;
+        }
+        @keyframes rotate {
+            from { transform: translate(-50%, -50%) rotate(0deg); }
+            to { transform: translate(-50%, -50%) rotate(360deg); }
+        }
+        @keyframes float {
+            0%, 100% { transform: translate(0, 0); }
+            50% { transform: translate(20px, 20px); }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>CareerPath</h1>
+        <div class="subtitle">Plataforma de Orientação de Carreira com IA</div>
+        <div class="logo">
+            <div class="logo-text">CareerPath</div>
+        </div>
+        <div class="description">
+            Solução integrada para aprendizado, desenvolvimento e empregabilidade<br>
+            Sua jornada do zero ao emprego em tech
+        </div>
+    </div>
+    <div class="background-effect"></div>
+    <div class="background-effect"></div>
+    <div class="background-effect"></div>
+</body>
+</html>
