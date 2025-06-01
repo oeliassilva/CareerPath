@@ -16,6 +16,7 @@
             align-items: center;
             min-height: 100vh;
             position: relative;
+            flex-direction: column;
         }
         .container {
             text-align: center;
@@ -24,15 +25,16 @@
             display: flex;
             flex-direction: column;
             align-items: center;
-            padding: 0;
+            padding: 0 20px;
             width: 100%;
             box-sizing: border-box;
+            max-width: 800px;
         }
         .logo {
-            width: 80vw; /* Usa 80% da largura da tela */
-            max-width: 450px; /* Limite máximo para telas grandes */
-            height: auto; /* Mantém a proporção da imagem */
-            margin-bottom: 0;
+            width: 80vw;
+            max-width: 450px;
+            height: auto;
+            margin-bottom: 20px;
         }
         .logo img {
             width: 100%;
@@ -44,7 +46,21 @@
             margin-top: 0;
             line-height: 1.2;
             text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.5);
-            padding: 0 15px; /* Adiciona padding lateral para evitar que o texto encoste nas bordas */
+            padding: 0 15px;
+        }
+        .section {
+            margin-top: 30px;
+            text-align: left;
+            font-size: 1em;
+            line-height: 1.5;
+            background-color: rgba(255, 255, 255, 0.05);
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0,0,0,0.3);
+        }
+        .section h2 {
+            margin-top: 0;
+            color: #ffd700;
         }
         .background-effect {
             position: absolute;
@@ -54,34 +70,17 @@
             filter: blur(50px);
             animation: float 6s ease-in-out infinite;
         }
-        .background-effect:nth-child(2) {
-            top: 20%;
-            left: 20%;
-            animation-delay: 2s;
-        }
-        .background-effect:nth-child(3) {
-            bottom: 20%;
-            right: 20%;
-            animation-delay: 4s;
-        }
+        .background-effect:nth-child(2) { top: 20%; left: 20%; animation-delay: 2s; }
+        .background-effect:nth-child(3) { bottom: 20%; right: 20%; animation-delay: 4s; }
         @keyframes float {
             0%, 100% { transform: translate(0, 0); }
             50% { transform: translate(20px, 20px); }
         }
-        /* Media query para telas menores (celulares) */
         @media (max-width: 600px) {
-            .logo {
-                width: 70vw; /* Reduz ainda mais o tamanho do logo em telas pequenas */
-                max-width: 300px;
-            }
-            .description {
-                font-size: 1em; /* Reduz o tamanho da fonte para telas menores */
-                margin-top: 0;
-            }
-            .background-effect {
-                width: 150px; /* Reduz o tamanho do efeito de fundo em telas menores */
-                height: 150px;
-            }
+            .logo { width: 70vw; max-width: 300px; }
+            .description { font-size: 1em; margin-top: 0; }
+            .background-effect { width: 150px; height: 150px; }
+            .section { font-size: 0.9em; }
         }
     </style>
 </head>
@@ -91,11 +90,44 @@
             <img src="images/logo.png" alt="CareerPath Logo">
         </div>
         <div class="description">
-            Solução integrada para<br> aprendizado, desenvolvimento e empregabilidade<br><p></p>
+            Solução integrada para<br> aprendizado, desenvolvimento e empregabilidade.<br>
             Plataforma em desenvolvimento.<br>
             Fique atento às atualizações!
         </div>
+
+        <div class="section">
+            <h2>Visão</h2>
+            <p>Na CareerPath, acreditamos que toda pessoa merece ter clareza sobre o seu caminho profissional.</p>
+            <p>Criamos uma plataforma que combina inteligência artificial, ciência de dados e tecnologia de ponta para ajudar indivíduos a entenderem suas habilidades, descobrirem novas possibilidades e se conectarem com oportunidades reais de carreira.</p>
+            <p>Nosso propósito é democratizar o acesso à orientação profissional, tornando-a acessível, personalizada e contínua — para que ninguém mais se sinta perdido ao tentar decidir o próximo passo da sua jornada.</p>
+            <p><strong>CareerPath: clareza para quem busca direção, oportunidades para quem quer crescer.</strong></p>
+        </div>
+
+        <div class="section">
+            <h2>Missão</h2>
+            <p>Empoderar pessoas a tomarem decisões conscientes sobre suas carreiras, usando tecnologia acessível, precisa e personalizada.</p>
+            <p>Construímos ferramentas que:</p>
+            <ul>
+                <li>Identificam competências e potencialidades individuais.</li>
+                <li>Orientam trajetórias profissionais baseadas em dados e tendências de mercado.</li>
+                <li>Facilitam o encontro entre talentos e oportunidades, criando pontes entre indivíduos e organizações.</li>
+            </ul>
+            <p>Trabalhamos para transformar a forma como as pessoas planejam suas carreiras — de maneira contínua, autônoma e inteligente.</p>
+        </div>
+
+        <div class="section">
+            <h2>Valores</h2>
+            <ul>
+                <li><strong>Acessibilidade:</strong> Tornamos a orientação profissional disponível para todos.</li>
+                <li><strong>Transparência:</strong> Usamos dados e algoritmos de forma ética, respeitando a privacidade.</li>
+                <li><strong>Empatia:</strong> Valorizamos a singularidade de cada trajetória.</li>
+                <li><strong>Inovação:</strong> Buscamos constantemente melhorar a experiência do usuário.</li>
+                <li><strong>Impacto Social:</strong> Contribuímos para uma sociedade mais realizada, produtiva e justa.</li>
+                <li><strong>Colaboração:</strong> Grandes transformações são construídas em conjunto.</li>
+            </ul>
+        </div>
     </div>
+
     <div class="background-effect"></div>
     <div class="background-effect"></div>
     <div class="background-effect"></div>
